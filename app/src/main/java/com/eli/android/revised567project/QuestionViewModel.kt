@@ -7,6 +7,7 @@ class QuestionViewModel: ViewModel() {
 
     var currentIndex = 0
 //    var questionBank: List<Question>? = null
+    var correctAnswers : Double = 0.0
 
 
     private val cppEasyQuestionBank = listOf(

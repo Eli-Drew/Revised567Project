@@ -1,5 +1,6 @@
 package com.eli.android.revised567project
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
@@ -14,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.difficulty_select.*
 
 private const val TAG = "QuestionActivity"
+const val SCORE = "QuestionActivity.score"
 
 class QuestionActivity : AppCompatActivity () {
 
@@ -80,6 +82,7 @@ class QuestionActivity : AppCompatActivity () {
     private fun updateQuestion() {
         if (questionViewModel.currentIndex >= questionViewModel.questionBank.size) {
             Toast.makeText(this,R.string.out_of_range, LENGTH_SHORT).show()
+            getScore()
         }
         else {
             val question = questionViewModel.currentQuestionText
@@ -98,18 +101,24 @@ class QuestionActivity : AppCompatActivity () {
         val correctAnswer = questionViewModel.currentQuestionAnswer
         val messageResID = if (userAnswer == correctAnswer) {
             R.string.correctAnswer
+            questionViewModel.correctAnswers++
         }
         else {
             R.string.incorrectAnswer
         }
-        Toast.makeText(this,messageResID,LENGTH_SHORT).show()
+//        Toast.makeText(this,messageResID,LENGTH_SHORT).show()
     }
 
+    private fun getScore() {
+        val score : Double = (questionViewModel.correctAnswers / (questionViewModel.questionBank.size)) * 100
+        val possible = questionViewModel.questionBank.size
+        val correct = questionViewModel.correctAnswers.toInt()
+        val intent = Intent(this, ScoreActivity::class.java)
+        intent.putExtra("possible", possible)
+        intent.putExtra(SCORE, score)
+        intent.putExtra("correct", correct)
+        startActivity(intent)
 
+    }
 
-//    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
-//        super.onSaveInstanceState(outState, outPersistentState)
-//        onSaveInstanceState.putString(null, questionViewModel.currentLang)
-//    }
 }
-

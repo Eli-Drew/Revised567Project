@@ -16,6 +16,14 @@
     <string name="help_button">Help</string>
     <string name="quit_button">Quit</string>
 
+<!--    these are for the score activity-->
+    <string name="score_text_view">Your Score!</string>
+    <string name="score_correct">correct</string>
+    <string name="score_possible">possible</string>
+    <string name="score_time">Time:</string>
+    <string name="score_pts">pts!</string>
+
+
     <string name="first_question">When creating an object from a class, what is always invoked?</string>
     <string name="homepage_title">Welcome to the Ultimate Quiz Game!</string>
 
@@ -34,7 +42,7 @@
 
     <string name="playagain">Heck yeah!</string>
     <string name="exitgame">No thanks!</string>
-    <string name="ScoreDisplay">Congrats! Your received a score of 15/20! Want to try again?</string>
+<!--    <string name="ScoreDisplay">Congrats! Your received a score of 15/20! Want to try again?</string>-->
     <string name="correctAnswer">Correct! :)</string>
     <string name="incorrectAnswer">Incorrect :(</string>
     <string name="out_of_range">There are no more questions.</string>
