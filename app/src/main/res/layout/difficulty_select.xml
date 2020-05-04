@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".Difficulty">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/difficultySelect" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+
+            android:text="@string/easy"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/easy_button"
+            android:textColor="@color/buttonTextColor"
+            android:backgroundTint="@color/colorPrimary"
+            />
+
+        <Button
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/medium"
+            android:textColor="@color/buttonTextColor"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/medium_button"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="@string/hard"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/buttonTextColor"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/hard_button"/>
+
+
+        <Button
+            android:text="@string/prodigy"
+            android:textColor="@color/buttonTextColor"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/prodigy_button"/>
+    </LinearLayout>
+
+
+</LinearLayout>

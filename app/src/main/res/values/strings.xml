@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">quiz game</string>
+
+    <string name="menu_button">Menu</string>
+
+    <string name="btnA">A</string>
+    <string name="btnB">B</string>
+    <string name="btnC">C</string>
+    <string name="btnD">D</string>
+    <string name="btnPrev">Prev</string>
+    <string name="btnNext">Next</string>
+
+    <!--    These are for the menu activity.-->
+    <string name="menu_title">Menu</string>
+    <string name="start_button">Start</string>
+    <string name="help_button">Help</string>
+    <string name="quit_button">Quit</string>
+
+    <string name="first_question">When creating an object from a class, what is always invoked?</string>
+    <string name="homepage_title">Welcome to the Ultimate Quiz Game!</string>
+
+    <string name="csharp">C#</string>
+    <string name="javascript">JavaScript</string>
+    <string name="python">Python</string>
+    <string name="cpp">C++</string>
+
+    <string name="langSelect">Please select the language of your choosing: </string>
+    <string name="difficultySelect">Please select a level of difficulty: </string>
+
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="prodigy">Prodigy</string>
+
+    <string name="playagain">Heck yeah!</string>
+    <string name="exitgame">No thanks!</string>
+    <string name="ScoreDisplay">Congrats! Your received a score of 15/20! Want to try again?</string>
+    <string name="correctAnswer">Correct! :)</string>
+    <string name="incorrectAnswer">Incorrect :(</string>
+    <string name="out_of_range">There are no more questions.</string>
+
+
+    <string name="cppEasyQuestion1">This is CPP Easy Test 1.</string>
+    <string name="cppMediumQues1">This is CPP Medium Test 1.</string>
+    <string name="cppHardQues1">This is a CPP Hard Test 1.</string>
+    <string name="cppProdigyQues1">This is a CPP Progidgy Test 1.</string>
+    <string name="cppEasyChoices1">A: Cpp easy 1\nB: Cpp easy 1\nC: Cpp easy 1\nD: Cpp easy 1.</string>
+    <string name="cppMediumChoices1">A: Cpp medium 1\nB: Cpp medium 1\nC: Cpp medium 1\nD: Cpp medium 1.</string>
+    <string name="cppHardChoices1">A: Cpp easy 1\nB: Cpp easy 1\nC: Cpp easy 1\nD: Cpp easy 1.</string>
+    <string name="cppProdigyChoices1">A: Cpp easy 1\nB: Cpp easy 1\nC: Cpp easy 1\nD: Cpp easy 1.</string>
+
+    <string name="CsharpeEasy1">This is C# test Easy 1.</string>
+    <string name="CsharpeChoicesEasy1">A: this is good\nB: what\'s for dinner.</string>
+
+    <string name="PythonEasyQues1">Python is a ....</string>
+    <string name="PythonEasyChoices1">A: High-level language\nB: Low-level language\nC: Poisonous spider\nD: Mid-level language.</string>
+    <string name="PythonMediumQues1">Which of the following is a correct \'if\' statement?</string>
+    <string name="PythonMediumChoices">A: if (x = y) {code;}\nB: if x = y: code\nC: if (x == y) {code;}\nD: if x == y: code</string>
+    <string name="PythonHardQues1">Which of the following is a Python Keyword?</string>
+    <string name="PythonHardChoices1">A: new\nB: malloc\nC: true\nD: True</string>
+    <string name="PythonProdigyQues1">Which of the following is a Python Keyword?</string>
+    <string name="PythonProdigyChoices1">A: new\nB: switch\nC: yield\nD: switch</string>
+
+    <string name="easyCSOne">" Which of the following operator creates a pointer to a variable in C#?"</string>
+    <string name="easyCSOneAns">"A: sizeof\n B: typeof\n C: *\n D: ampersand"</string>
+
+    <string name="easyCSTwo">Which of the following is correct about variable naming conventions in C#?</string>
+    <string name="easyCSTwoAns">"A: A name must begin with a letter that could be followed by a sequence of letters, digits (0 to 9) or underscore\n B: The first character in an identifier cannot be a digit\n C: Both of the above\n D: None of the above"</string>
+
+    <string name="medCSOne">" Which of the following access specifier in C# allows a class to expose its member variables and member functions to other functions and objects in the current assembly??"</string>
+    <string name="medCSOneAns">"A: Public\n B: Private\n C: Protected\n D: Internal"</string>
+
+    <string name="medCSTwo">"Which of the following converts a type to a small floating point number in C#?</string>
+    <string name="medCSTwoAns">"A: ToInt64\n B: ToSbyte\n C: ToSingle\n D: None of the above"</string>
+
+    <string name="hardCSOne">"Which of the following property of Array class in C# gets a 32-bit integer, the total number of elements in all the dimensions of the Array?"</string>
+    <string name="hardCSOneAns">"A: Rank\n B: LongLength\n C: Length\n D: None of the above"</string>
+
+    <string name="hardCSTwo">"Which of the following is the default access specifier of a class member function?? "</string>
+    <string name="hardCSTwoAns">"A: Public\n B: Private\n C: Protected\n D: Internal"</string>
+
+    <string name="prodigyCSOne">"Which of the following is true about exceptions in C#?"</string>
+    <string name="prodigyCSOneAns">"A:The exception classes in C# are mainly directly or indirectly derived from the System.Exception class\n B: C# exceptions are represented by classes\n C:  Both of the above.\n D: None of the above"</string>
+
+    <string name="prodigyCSTwo">"Does C# support multiple inheritance"</string>
+    <string name="prodigyCSTwoAns">"A: Yes\n B: No\n C: Sometimes\n D:When it feels like it"</string>
+
+    <string name="easyJSOne">"Which of these is not a way to declare variables in JavaScript?"</string>
+    <string name="easyJSOneAns">"A: let\n B: const\n C: int\n D: var"</string>
+
+    <string name="easyJSTwo">"What's a primary use of JavaScript?</string>
+    <string name="easyJSTwoAns">"A: Styling the Page\n B: Serving as a Database\n C: Scripting\n D: Making the Page Interactive"</string>
+
+    <string name="medJSOne">"How do I access the value of a key in an object?"</string>
+    <string name="medJSOneAns">"A: myVal = Obj.key\n B: myVal = Obj.val\n C: Object.keys(Obj).val \n D: None of the above"</string>
+
+    <string name="medJSTwo">"What's another name for JavaScript?</string>
+    <string name="medJSTwoAns">"A: TypeScript\n B: React\n C: ECMAScript\n D: None of the above"</string>
+
+    <string name="hardJSOne">"How many variable keywords use variable hoisting?"</string>
+    <string name="hardJSOneAns">"A: 0\n B: 1\n C: 2\n D: 3"</string>
+
+    <string name="hardJSTwo">"What does .split('') do in JavaScript? "</string>
+    <string name="hardJSTwoAns">"A: Makes each character in a string an element in an array\n B: removes all spaces from a string\n C: removes all spaces from the end of a string\n D: makes each element in an array part of the same string"</string>
+
+    <string name="prodigyJSOne">"What is an advantage of the React JavaScript framework?"</string>
+    <string name="prodigyJSOneAns">"A:Better styling options\n B: fast transitions/page loading\n C: no need for vanilla JavaScript\n D: None of the above"</string>
+
+    <string name="prodigyJSTwo">"How do you convert a nodelist into an array in JavaScript?"</string>
+    <string name="prodigyJSTwoAns">"A: myArr = Array.this(nodelist)\n B: myArr = Array.to(nodelist)\n C: myArr = Array.from(nodelist)\n D:myArr = Array.convert(nodelist)"</string>
+
+
+    <string name="JSeasyQues1">JS easy 1</string>
+    <string name="JSeasyChoice1">A: this is good\nB: what\'s for dinner.</string>
+
+    <!--    Jim's Questions    -->
+
+</resources>
+

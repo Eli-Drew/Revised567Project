@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".QuestionActivity"
+    >
+
+    <TextView
+        android:id="@+id/question_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="24dp"
+        android:textSize="20sp"
+        android:text="" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="24dp"
+            android:textSize="20sp"
+            android:text=""
+            android:id="@+id/choices_view"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/a_button"
+            android:layout_width="wrap_content"
+            android:textColor="@color/buttonTextColor"
+
+            android:layout_height="wrap_content"
+            android:text="@string/btnA"
+            android:backgroundTint="@color/colorPrimary"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:textColor="@color/buttonTextColor"
+            android:layout_height="wrap_content"
+            android:text="@string/btnB"
+            android:backgroundTint="@color/colorPrimary"
+            android:id="@+id/b_button"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/c_button"
+            android:textColor="@color/buttonTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnC"
+            android:backgroundTint="@color/colorPrimary"/>
+
+
+        <Button
+            android:id="@+id/d_button"
+            android:textColor="@color/buttonTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnD"
+            android:backgroundTint="@color/colorPrimary"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnPrevious"
+            android:textColor="@color/buttonTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/arrow_left"
+            android:drawablePadding="4dp"
+            android:text="@string/btnPrev"
+            />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:textColor="@color/buttonTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/arrow_right"
+            android:drawablePadding="4dp"
+            android:text="@string/btnNext"
+            />
+    </LinearLayout>
+
+</LinearLayout>
