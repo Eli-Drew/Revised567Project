@@ -37,6 +37,7 @@ class LanguageSelect : AppCompatActivity() {
             val name = "JavaScript"
             intent.putExtra("language", name)
             startActivityForResult(intent,0)
+//            startActivity(intent)
         }
 
         pythonButton.setOnClickListener {

@@ -12,6 +12,7 @@
         <activity android:name=".LanguageSelect"/>
         <activity android:name=".DifficultySelect"/>
         <activity android:name=".QuestionActivity"/>
+        <activity android:name=".ScoreActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

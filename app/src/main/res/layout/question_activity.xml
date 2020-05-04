@@ -6,8 +6,9 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="@color/colorBackground"
-    tools:context=".QuestionActivity"
-    >
+    tools:context=".QuestionActivity">
+
+
 
     <TextView
         android:id="@+id/question_text_view"
@@ -100,6 +101,20 @@
             android:drawablePadding="4dp"
             android:text="@string/btnNext"
             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="24dp"
+            android:id="@+id/chronometer_view"/>
+
     </LinearLayout>
 
 </LinearLayout>

@@ -31,7 +31,8 @@ class DifficultySelect : AppCompatActivity() {
             val name: String = "Easy"
             intent.putExtra("difficulty",name)
             intent.putExtra("language", language)
-            startActivityForResult(intent,0)
+//            startActivityForResult(intent,0)
+            startActivity(intent)
         }
 
         mediumButton.setOnClickListener{
@@ -55,8 +56,8 @@ class DifficultySelect : AppCompatActivity() {
             val name = "Prodigy"
             intent.putExtra("difficulty", name)
             intent.putExtra("language", language)
-            //startActivityForResult(intent,0)
-            startActivity(intent)
+            startActivityForResult(intent,0)
+//            startActivity(intent)
         }
     }
 }

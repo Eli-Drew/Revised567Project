@@ -3,8 +3,11 @@ package com.eli.android.revised567project
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.os.SystemClock
 import android.util.Log
+import android.view.View
 import android.widget.Button
+import android.widget.Chronometer
 import android.widget.TextView
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
@@ -27,6 +30,9 @@ class QuestionActivity : AppCompatActivity () {
     private lateinit var nextButton: Button
     private lateinit var questionTextView: TextView
     private lateinit var choicesTextView: TextView
+    private lateinit var chronometer: Chronometer
+    private var running: Boolean = false
+
 
 
     private val questionViewModel: QuestionViewModel by lazy {
@@ -49,6 +55,7 @@ class QuestionActivity : AppCompatActivity () {
         dbutton = findViewById(R.id.d_button)
         previousButton = findViewById(R.id.btnPrevious)
         nextButton = findViewById(R.id.btnNext)
+        chronometer = findViewById(R.id.chronometer_view)
 
         //linking up the question and choice views to this activity
         questionTextView = findViewById(R.id.question_text_view)
@@ -76,12 +83,14 @@ class QuestionActivity : AppCompatActivity () {
             questionViewModel.moveToNext()
             updateQuestion()
         }
+
+        startChronometer(chronometer)
     }
 
     //prev is always false because previous button isn't implemented yet.
     private fun updateQuestion() {
         if (questionViewModel.currentIndex >= questionViewModel.questionBank.size) {
-            Toast.makeText(this,R.string.out_of_range, LENGTH_SHORT).show()
+//            Toast.makeText(this,R.string.out_of_range, LENGTH_SHORT).show()
             getScore()
         }
         else {
@@ -110,15 +119,36 @@ class QuestionActivity : AppCompatActivity () {
     }
 
     private fun getScore() {
-        val score : Double = (questionViewModel.correctAnswers / (questionViewModel.questionBank.size)) * 100
+        stopChronometer(chronometer)
+        val time = chronometer.contentDescription
+        val score : Double = ((questionViewModel.correctAnswers).toDouble() / (questionViewModel.questionBank.size)) * 100
         val possible = questionViewModel.questionBank.size
         val correct = questionViewModel.correctAnswers.toInt()
-        val intent = Intent(this, ScoreActivity::class.java)
-        intent.putExtra("possible", possible)
-        intent.putExtra(SCORE, score)
-        intent.putExtra("correct", correct)
-        startActivity(intent)
-
+        val scoreIntent = Intent(this, ScoreActivity::class.java)
+        scoreIntent.putExtra("possible", possible)
+        scoreIntent.putExtra(SCORE, score)
+        scoreIntent.putExtra("correct", correct)
+        scoreIntent.putExtra("time", time)
+        startActivity(scoreIntent)
     }
 
+    fun startChronometer(view: View) {
+        if (!running) {
+            chronometer.base
+            chronometer.start()
+            running = true
+        }
+    }
+
+    fun stopChronometer(view: View) {
+        if (running) {
+            chronometer.stop()
+        }
+    }
+
+    fun resetChronometer(view: View) {
+        if (!running) {
+            chronometer.base
+        }
+    }
 }

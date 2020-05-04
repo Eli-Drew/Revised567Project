@@ -22,7 +22,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/correct_text_view"
-            android:text=""
             android:padding="24dp"/>
 
         <TextView
@@ -42,7 +41,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/possible_text_view"
-            android:text=""
             android:padding="24dp"/>
 
         <TextView
@@ -68,7 +66,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/timer_text_view"
-            android:text=""
             android:padding="24dp"/>
 
     </LinearLayout>
@@ -83,7 +80,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/score_points_text_view"
-            android:text=""
             android:padding="24dp"/>
 
         <TextView
