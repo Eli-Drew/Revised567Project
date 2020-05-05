@@ -90,6 +90,25 @@
 
     </LinearLayout>
 
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:text="@string/enter_name"-->
+<!--        android:textSize="24dp"/>-->
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:autofillHints="@string/enter_name"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/return_home"
+        android:id="@+id/score_return_home"/>
+
 
 
 

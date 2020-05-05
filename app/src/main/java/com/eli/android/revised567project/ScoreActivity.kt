@@ -1,5 +1,6 @@
 package com.eli.android.revised567project
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.View
@@ -10,11 +11,14 @@ import kotlin.math.round
 
 private const val CORRECT_MULTIPLIER = 100
 private const val  TIME_MULTIPLIER = -10
+const val POINTS_CORRECT = "score points correct"
+const val POINTS_POSSIBLE = "score points possible"
+const val TIME_TAKEN = "time taken"
+const val TOTAL_SCORE = "total score."
 
 class ScoreActivity : AppCompatActivity() {
 
     private lateinit var homeButton: Button
-
     private lateinit var correctView: TextView
     private lateinit var possibleView: TextView
     private lateinit var timeView: TextView
@@ -29,6 +33,7 @@ class ScoreActivity : AppCompatActivity() {
         possibleView = findViewById(R.id.possible_text_view)
         pointsView = findViewById(R.id.score_points_text_view)
         timeView = findViewById(R.id.timer_text_view)
+        homeButton = findViewById(R.id.score_return_home)
 
         val userScore = intent.getDoubleExtra(SCORE,0.0)
         val stringScore = round(userScore).toString()
@@ -43,6 +48,15 @@ class ScoreActivity : AppCompatActivity() {
         correctView.text = answersCorrect.toString()
         pointsView.text = totalPoints.toString()
         timeView.text = timeElapsed
+
+        homeButton.setOnClickListener {
+            val homeIntent = Intent(this, MainActivity::class.java)
+            homeIntent.putExtra(POINTS_POSSIBLE, pointsPossible)
+            homeIntent.putExtra(POINTS_CORRECT, answersCorrect)
+            homeIntent.putExtra(TIME_TAKEN, timeElapsed)
+            homeIntent.putExtra(TOTAL_SCORE, totalPoints)
+            startActivity(homeIntent)
+        }
 
 
     }
