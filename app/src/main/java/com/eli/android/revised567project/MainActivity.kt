@@ -1,9 +1,9 @@
 package com.eli.android.revised567project
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +22,25 @@ class MainActivity : AppCompatActivity() {
         menuStartButton.setOnClickListener{
             val intent = Intent(this, LanguageSelect::class.java)
             startActivity(intent)
-        }
-    }
-}
+        } // end  of menuStartButton
+
+        menuHelpButton.setOnClickListener {
+            val intent = Intent()
+            startActivity(intent)
+        } // end of menuHelpButton
+
+        menuQuitButton.setOnClickListener {
+//            onFinishedClick()
+            val intent = Intent(applicationContext, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            intent.addFlags((Intent.FLAG_ACTIVITY_NEW_TASK))
+            startActivity(intent)
+            finish()
+
+        } // end of menuQuitButton
+
+    } // end of override fun onCreate
+
+} // end of class
+

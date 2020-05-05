@@ -37,7 +37,7 @@ class QuestionActivity : AppCompatActivity () {
 
     private val questionViewModel: QuestionViewModel by lazy {
         ViewModelProvider(this).get(QuestionViewModel::class.java)
-    }
+    } // end of val questionViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -79,13 +79,13 @@ class QuestionActivity : AppCompatActivity () {
             checkAnswer("D")
         }
 
-        nextButton.setOnClickListener {
-            questionViewModel.moveToNext()
-            updateQuestion()
-        }
+//        nextButton.setOnClickListener {
+//            questionViewModel.moveToNext()
+//            updateQuestion()
+//        }
 
         startChronometer(chronometer)
-    }
+    } // nd of override onCreate
 
     //prev is always false because previous button isn't implemented yet.
     private fun updateQuestion() {
@@ -97,12 +97,11 @@ class QuestionActivity : AppCompatActivity () {
             val question = questionViewModel.currentQuestionText
             val choices = questionViewModel.currentChoicesText
 
-
             questionTextView.setText(question)
             choicesTextView.setText(choices)
-        }
+        } // end of else
 
-    }
+    } // end of fun updateQuestion
 
     //helper function for user input
     private fun checkAnswer(userAnswer: String) {
@@ -114,9 +113,13 @@ class QuestionActivity : AppCompatActivity () {
         }
         else {
             R.string.incorrectAnswer
-        }
+        } // end of else
+
+        questionViewModel.moveToNext()
+        updateQuestion()
+
 //        Toast.makeText(this,messageResID,LENGTH_SHORT).show()
-    }
+    } // end of fun checkAnswer
 
     private fun getScore() {
         stopChronometer(chronometer)
@@ -130,7 +133,7 @@ class QuestionActivity : AppCompatActivity () {
         scoreIntent.putExtra("correct", correct)
         scoreIntent.putExtra("time", time)
         startActivity(scoreIntent)
-    }
+    } //  end of fun getScore
 
     fun startChronometer(view: View) {
         if (!running) {
@@ -138,17 +141,19 @@ class QuestionActivity : AppCompatActivity () {
             chronometer.start()
             running = true
         }
-    }
+    } // end of fun startChrono
 
     fun stopChronometer(view: View) {
         if (running) {
             chronometer.stop()
         }
-    }
+    } // end of fun stopChrono
 
     fun resetChronometer(view: View) {
         if (!running) {
             chronometer.base
         }
-    }
-}
+    } // end of fun reset chrono
+
+} // end of class QuestionActivity
+
