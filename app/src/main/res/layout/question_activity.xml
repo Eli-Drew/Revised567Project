@@ -40,7 +40,6 @@
             android:id="@+id/a_button"
             android:layout_width="wrap_content"
             android:textColor="@color/buttonTextColor"
-
             android:layout_height="wrap_content"
             android:text="@string/btnA"
             android:backgroundTint="@color/colorPrimary"/>
