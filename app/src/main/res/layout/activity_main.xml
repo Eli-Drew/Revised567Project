@@ -1,82 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:gravity="center">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+        android:layout_height="207dp"
+        app:srcCompat="@drawable/main_logo_fg" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/start_menu_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/menu_title"
-            android:textSize="50sp"
-            android:gravity="center"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="0dp"
+            android:text="Programming Trivia Fun!"
+            android:textSize="37sp">
 
+        </TextView>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="201dp"
+        android:gravity="center"
+        android:paddingBottom="20dp">
 
         <Button
             android:id="@+id/menu_start_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
             android:text="@string/start_button"
-            android:textSize="24sp"
             android:textColor="@color/buttonTextColor"
-            android:backgroundTint="@color/colorPrimary"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/menu_score_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
             android:text="@string/score_button"
-            android:textSize="24sp"
             android:textColor="@color/buttonTextColor"
-            android:backgroundTint="@color/colorPrimary"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/menu_help_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
             android:text="@string/help_button"
-            android:textSize="24sp"
             android:textColor="@color/buttonTextColor"
-            android:backgroundTint="@color/colorPrimary"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center">
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/menu_quit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
             android:text="@string/quit_button"
-            android:textSize="24sp"
             android:textColor="@color/buttonTextColor"
-            android:backgroundTint="@color/colorPrimary"/>
+            android:textSize="24sp" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+
+    </LinearLayout>
+
+
 
 
 </LinearLayout>

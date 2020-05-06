@@ -11,19 +11,19 @@
     <string name="btnNext">Next</string>
 
     <!--    These are for the menu activity.-->
-    <string name="menu_title">Menu</string>
+    <string name="menu_title">Main Menu</string>
     <string name="start_button">Start</string>
     <string name="help_button">Help</string>
     <string name="quit_button">Quit</string>
     <string name="score_button">Scores</string>
 
     <!--    these are for the score activity-->
-    <string name="score_text_view">Your Score!</string>
-    <string name="score_correct">correct</string>
-    <string name="score_possible">possible</string>
-    <string name="score_time">Time:</string>
-    <string name="score_pts">pts!</string>
-    <string name="enter_name">Enter your name.</string>
+    <string name="score_text_view">Here\'s How You Did!</string>
+    <string name="score_correct">Correct</string>
+    <string name="score_possible">Total</string>
+    <string name="score_time">Time Elapsed:</string>
+    <string name="score_pts">Points: </string>
+    <string name="enter_name">Enter Your Name and Share with Friends!</string>
     <string name="return_home">Home Screen</string>
     <string name="score_user_name">User</string>
 
