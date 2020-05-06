@@ -25,8 +25,8 @@ class MainActivity : AppCompatActivity() {
         } // end  of menuStartButton
 
         menuHelpButton.setOnClickListener {
-            val intent = Intent()
-            startActivity(intent)
+            val helpIntent = Intent(this, HelpActivity::class.java)
+            startActivity(helpIntent)
         } // end of menuHelpButton
 
         menuQuitButton.setOnClickListener {
