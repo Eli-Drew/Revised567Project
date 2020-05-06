@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
     private lateinit var menuStartButton: Button
+    private lateinit var menuScoresButton: Button
     private lateinit var menuHelpButton: Button
     private lateinit var menuQuitButton: Button
 
@@ -24,6 +25,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         } // end  of menuStartButton
 
+//        menuScoresButton.setOnClickListener {
+//            val scoreIntent = Intent(this, ScoresList::class.java)
+//            startActivity(scoreIntent)
+//        } // end of menuScoresButton
+
         menuHelpButton.setOnClickListener {
             val helpIntent = Intent(this, HelpActivity::class.java)
             startActivity(helpIntent)
@@ -39,6 +45,8 @@ class MainActivity : AppCompatActivity() {
             finish()
 
         } // end of menuQuitButton
+
+
 
     } // end of override fun onCreate
 

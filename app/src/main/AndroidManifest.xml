@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_name_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ScoresList"/>
         <activity android:name=".HelpActivity"/>
         <activity android:name=".LanguageSelect"/>
         <activity android:name=".DifficultySelect"/>
