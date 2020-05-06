@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackground"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/question_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="23dp"
+            android:paddingBottom="40dp"
+            android:text="@string/homepage_title" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="19dp"
+            android:paddingBottom="20dp"
+            android:text="@string/langSelect" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+
+            android:text="@string/csharp"
+            android:textColor="@color/buttonTextColor"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/csharpe"
+            android:backgroundTint="@color/colorPrimary"/>
+
+        <Button
+            android:text="@string/javascript"
+            android:textColor="@color/buttonTextColor"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/javascript"
+            android:backgroundTint="@color/colorPrimary"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:text="@string/cpp"
+            android:textColor="@color/buttonTextColor"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/cpp"
+            android:backgroundTint="@color/colorPrimary"/>
+
+
+        <Button
+            android:text="@string/python"
+            android:textColor="@color/buttonTextColor"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/python"
+            android:backgroundTint="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

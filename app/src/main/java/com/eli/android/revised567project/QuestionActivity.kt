@@ -26,8 +26,6 @@ class QuestionActivity : AppCompatActivity () {
     private lateinit var bbutton: Button
     private lateinit var cbutton: Button
     private lateinit var dbutton: Button
-    private lateinit var previousButton: Button
-    private lateinit var nextButton: Button
     private lateinit var questionTextView: TextView
     private lateinit var choicesTextView: TextView
     private lateinit var chronometer: Chronometer
@@ -53,8 +51,6 @@ class QuestionActivity : AppCompatActivity () {
         bbutton = findViewById(R.id.b_button)
         cbutton = findViewById(R.id.c_button)
         dbutton = findViewById(R.id.d_button)
-        previousButton = findViewById(R.id.btnPrevious)
-        nextButton = findViewById(R.id.btnNext)
         chronometer = findViewById(R.id.chronometer_view)
 
         //linking up the question and choice views to this activity
@@ -78,11 +74,6 @@ class QuestionActivity : AppCompatActivity () {
         dbutton.setOnClickListener{
             checkAnswer("D")
         }
-
-//        nextButton.setOnClickListener {
-//            questionViewModel.moveToNext()
-//            updateQuestion()
-//        }
 
         startChronometer(chronometer)
     } // nd of override onCreate
