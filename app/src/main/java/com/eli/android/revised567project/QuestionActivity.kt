@@ -115,8 +115,9 @@ class QuestionActivity : AppCompatActivity () {
 
     private fun getScore() {
         stopChronometer(chronometer)
-//        val time = chronometer.setFormat("%s")
-        val time = chronometer.contentDescription
+        var time = chronometer.base
+        time %= 100
+//        val time = chronometer.contentDescription
         val score : Double = ((questionViewModel.correctAnswers).toDouble() / (questionViewModel.questionBank.size)) * 100
         val possible = questionViewModel.questionBank.size
         val correct = questionViewModel.correctAnswers.toInt()

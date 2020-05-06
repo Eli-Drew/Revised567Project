@@ -106,7 +106,8 @@
         android:gravity="center"
         android:hint="@string/enter_name"
         android:autofillHints="@string/score_user_name"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:id="@+id/score_input_username"/>
 
     <Button
         android:layout_width="wrap_content"
