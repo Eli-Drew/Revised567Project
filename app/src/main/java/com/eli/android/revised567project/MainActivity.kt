@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         menuStartButton = findViewById(R.id.menu_start_button)
+        menuScoresButton = findViewById(R.id.menu_score_button)
         menuHelpButton = findViewById(R.id.menu_help_button)
         menuQuitButton = findViewById(R.id.menu_quit_button)
 
@@ -25,10 +26,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         } // end  of menuStartButton
 
-//        menuScoresButton.setOnClickListener {
-//            val scoreIntent = Intent(this, ScoresList::class.java)
-//            startActivity(scoreIntent)
-//        } // end of menuScoresButton
+        menuScoresButton.setOnClickListener {
+            val scoreIntent = Intent(this, ScoresListActivity::class.java)
+            startActivity(scoreIntent)
+        } // end of menuScoresButton
 
         menuHelpButton.setOnClickListener {
             val helpIntent = Intent(this, HelpActivity::class.java)

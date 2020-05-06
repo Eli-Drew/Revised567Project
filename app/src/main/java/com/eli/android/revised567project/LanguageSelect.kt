@@ -17,7 +17,6 @@ class LanguageSelect : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(TAG, "onCreate(Bundle?) called")
         setContentView(R.layout.language_select)
 
         cSharpeButton = findViewById(R.id.csharpe)
