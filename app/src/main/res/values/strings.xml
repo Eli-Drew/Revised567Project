@@ -24,6 +24,7 @@
     <string name="score_pts">pts!</string>
     <string name="enter_name">Enter your name.</string>
     <string name="return_home">Home Screen</string>
+    <string name="score_user_name">User</string>
 
     <string name="first_question">When creating an object from a class, what is always invoked?</string>
     <string name="homepage_title">Welcome to the Ultimate Quiz Game!</string>
