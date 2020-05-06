@@ -76,6 +76,7 @@ class QuestionActivity : AppCompatActivity () {
         }
 
         startChronometer(chronometer)
+        chronometer.format = "%S"
     } // nd of override onCreate
 
     //prev is always false because previous button isn't implemented yet.
@@ -114,6 +115,7 @@ class QuestionActivity : AppCompatActivity () {
 
     private fun getScore() {
         stopChronometer(chronometer)
+//        val time = chronometer.setFormat("%s")
         val time = chronometer.contentDescription
         val score : Double = ((questionViewModel.correctAnswers).toDouble() / (questionViewModel.questionBank.size)) * 100
         val possible = questionViewModel.questionBank.size

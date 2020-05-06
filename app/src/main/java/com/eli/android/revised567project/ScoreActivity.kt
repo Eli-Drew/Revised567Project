@@ -39,7 +39,8 @@ class ScoreActivity : AppCompatActivity() {
         val stringScore = round(userScore).toString()
         val pointsPossible = intent.getIntExtra("possible",0)
         val answersCorrect = intent.getIntExtra("correct",0)
-        val timeElapsed = intent.getCharSequenceExtra("time")
+//        val timeElapsed = intent.getCharSequenceExtra("time")
+        val timeElapsed = intent.getStringExtra("time")
 
 //        val totalPoints = getTotalPoints(timeElapsed,answersCorrect)
         val totalPoints = CORRECT_MULTIPLIER * answersCorrect
@@ -60,8 +61,8 @@ class ScoreActivity : AppCompatActivity() {
 
 
     }
-    fun getTotalPoints(time: CharSequence?,  correctAnswers: Int) : Int {
-        val seconds = time.toString().toInt()
+    fun getTotalPoints(time: String,  correctAnswers: Int) : Int {
+        val seconds = time.toInt()
         val pointsDeducted = seconds * TIME_MULTIPLIER
         val multiplierPoints = CORRECT_MULTIPLIER * correctAnswers
         return multiplierPoints - pointsDeducted
