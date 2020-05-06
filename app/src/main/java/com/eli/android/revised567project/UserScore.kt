@@ -1,3 +1,5 @@
 package com.eli.android.revised567project
 
-data class UserScore(var userName: String = "", var time: String = "", var totalPoints: Int = 0) {}
+import java.util.*
+
+data class UserScore(val id: UUID=UUID.randomUUID(), var userName: String = "", var time: String = "", var totalPoints: Int = 0) {}
