@@ -63,7 +63,7 @@ class ScoresListFragment : Fragment() {
 
     private inner class ScoreAdapter(var scores:List<UserScore>) : RecyclerView.Adapter<ScoreHolder>() {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScoreHolder {
-            val view: View = layoutInflater.inflate(R.layout.scores_list_layout, parent, false)
+            val view: View = layoutInflater.inflate(R.layout.score_item_layout, parent, false)
             return ScoreHolder(view)
         }
 
