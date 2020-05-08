@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.round
 
 private const val CORRECT_MULTIPLIER = 100
-private const val  TIME_MULTIPLIER = -10
+private const val  TIME_MULTIPLIER = 10
 const val POINTS_CORRECT = "score points correct"
 const val POINTS_POSSIBLE = "score points possible"
 const val TIME_TAKEN = "time taken"
@@ -43,16 +43,16 @@ class ScoreActivity : AppCompatActivity() {
         val stringScore = round(userScore).toString()
         val pointsPossible = intent.getIntExtra("possible",0)
         val answersCorrect = intent.getIntExtra("correct",0)
-        val timeElapsed = intent.getLongExtra("time", 0L)
-//        val timeElapsed = intent.getStringExtra("time")
+        val timePointsDeducted = intent.getLongExtra("timePoints", 0L)
+        val timeElapsed = intent.getStringExtra("time")
 
-        val totalPoints = getTotalPoints(timeElapsed,answersCorrect)
+        val totalPoints = getTotalPoints(timePointsDeducted,answersCorrect)
 //        val totalPoints = CORRECT_MULTIPLIER * answersCorrect
 
         possibleView.text = pointsPossible.toString()
         correctView.text = answersCorrect.toString()
         pointsView.text = totalPoints.toString()
-        timeView.text = timeElapsed.toString()
+        timeView.text = timeElapsed
 
         homeButton.setOnClickListener {
             val homeIntent = Intent(this, MainActivity::class.java)
@@ -69,10 +69,10 @@ class ScoreActivity : AppCompatActivity() {
 
     }
     fun getTotalPoints(time: Long,  correctAnswers: Int) : Long {
-//        val seconds = time
-//        val pointsDeducted = seconds * TIME_MULTIPLIER
+        val seconds = time
+        val pointsDeducted = seconds * TIME_MULTIPLIER
         val multiplierPoints = CORRECT_MULTIPLIER * correctAnswers
-//        return multiplierPoints - pointsDeducted
-        return multiplierPoints - time
+        return multiplierPoints - pointsDeducted
+//        return multiplierPoints - time
     }
 }

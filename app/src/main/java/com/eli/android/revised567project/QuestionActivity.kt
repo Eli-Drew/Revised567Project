@@ -30,6 +30,7 @@ class QuestionActivity : AppCompatActivity () {
     private lateinit var choicesTextView: TextView
     private lateinit var chronometer: Chronometer
     private var running: Boolean = false
+    private var pauseOffSet: Long = 0
 
 
 
@@ -115,9 +116,13 @@ class QuestionActivity : AppCompatActivity () {
 
     private fun getScore() {
         stopChronometer(chronometer)
-        var time = chronometer.base
-        time %= 100
-//        val time = chronometer.contentDescription
+
+        //this is still inconsistent. need to get an actual number some other way.
+        var timePoints = pauseOffSet
+        timePoints /= 1000
+
+        val time = chronometer.contentDescription
+        resetChronometer(chronometer)
         val score : Double = ((questionViewModel.correctAnswers).toDouble() / (questionViewModel.questionBank.size)) * 100
         val possible = questionViewModel.questionBank.size
         val correct = questionViewModel.correctAnswers.toInt()
@@ -126,12 +131,13 @@ class QuestionActivity : AppCompatActivity () {
         scoreIntent.putExtra(SCORE, score)
         scoreIntent.putExtra("correct", correct)
         scoreIntent.putExtra("time", time)
+        scoreIntent.putExtra("timePoints", timePoints)
         startActivity(scoreIntent)
     } //  end of fun getScore
 
     fun startChronometer(view: View) {
         if (!running) {
-            chronometer.base
+            chronometer.setBase(SystemClock.elapsedRealtime() - pauseOffSet)
             chronometer.start()
             running = true
         }
@@ -140,12 +146,15 @@ class QuestionActivity : AppCompatActivity () {
     fun stopChronometer(view: View) {
         if (running) {
             chronometer.stop()
+            pauseOffSet = SystemClock.elapsedRealtime() - chronometer.getBase()
+            running = false
         }
     } // end of fun stopChrono
 
     fun resetChronometer(view: View) {
         if (!running) {
-            chronometer.base
+            chronometer.setBase(SystemClock.elapsedRealtime())
+            pauseOffSet = 0
         }
     } // end of fun reset chrono
 
