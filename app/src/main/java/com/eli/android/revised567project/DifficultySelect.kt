@@ -28,7 +28,7 @@ class DifficultySelect : AppCompatActivity() {
 
         easyButton.setOnClickListener{
             val intent = Intent(this,QuestionActivity::class.java)
-            val name: String = "Easy"
+            val name = "Easy"
             intent.putExtra("difficulty",name)
             intent.putExtra("language", language)
 //            startActivityForResult(intent,0)

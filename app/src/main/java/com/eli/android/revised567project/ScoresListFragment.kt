@@ -57,7 +57,7 @@ class ScoresListFragment : Fragment() {
         fun bind(score: UserScore) {
             this.score = score
             timeTextView.text = this.score.time
-            usernameTextView.text = this.score.time
+            usernameTextView.text = this.score.userName
         }
     } // end of ScoreHolder inner class
 

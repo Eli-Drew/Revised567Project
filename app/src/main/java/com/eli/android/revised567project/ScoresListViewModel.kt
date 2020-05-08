@@ -9,10 +9,11 @@ class ScoresListViewModel : ViewModel() {
 
         for (i: Int in 0 until 8) {
             val score = UserScore()
-            initTime = i
+            initTime += i
             val stringTime = initTime.toString()
             score.time = stringTime
-            score.totalPoints = i
+            score.totalPoints = i + 5
+            score.userName = "username"
             scores.plusAssign(score)
         }
     }
