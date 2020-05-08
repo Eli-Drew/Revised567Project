@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="0dp"
-            android:text="Programming Trivia Fun!"
+            android:text="@string/menu_title"
             android:textSize="37sp">
 
         </TextView>
@@ -46,7 +46,8 @@
             android:backgroundTint="@color/colorPrimary"
             android:text="@string/start_button"
             android:textColor="@color/buttonTextColor"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            style="@style/ButtonDefault"/>
 
         <Button
             android:id="@+id/menu_score_button"
