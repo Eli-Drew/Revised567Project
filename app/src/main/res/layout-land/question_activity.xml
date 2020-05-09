@@ -39,20 +39,20 @@
         android:orientation="horizontal">
 
         <Button
+            style="@style/ButtonDefault"
             android:id="@+id/a_button"
             android:layout_width="wrap_content"
             android:textColor="@color/buttonTextColor"
             android:layout_height="wrap_content"
-            android:text="@string/btnA"
-            android:backgroundTint="@color/colorPrimary"/>
+            android:text="@string/btnA"/>
 
 
         <Button
+            style="@style/ButtonDefault"
             android:layout_width="wrap_content"
             android:textColor="@color/buttonTextColor"
             android:layout_height="wrap_content"
             android:text="@string/btnB"
-            android:backgroundTint="@color/colorPrimary"
             android:id="@+id/b_button"/>
     </LinearLayout>
 
@@ -62,21 +62,21 @@
         android:orientation="horizontal">
 
         <Button
+            style="@style/ButtonDefault"
             android:id="@+id/c_button"
             android:textColor="@color/buttonTextColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btnC"
-            android:backgroundTint="@color/colorPrimary"/>
+            android:text="@string/btnC"/>
 
 
         <Button
+            style="@style/ButtonDefault"
             android:id="@+id/d_button"
             android:textColor="@color/buttonTextColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btnD"
-            android:backgroundTint="@color/colorPrimary"/>
+            android:text="@string/btnD"/>
     </LinearLayout>
 
     <LinearLayout
