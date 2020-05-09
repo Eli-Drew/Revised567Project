@@ -78,7 +78,8 @@ class ScoreActivity : AppCompatActivity() {
             score.time = timeElapsed
             score.totalPoints = totalPoints
             val inputUserName = findViewById<EditText>(R.id.score_input_username)
-            score.userName = inputUserName.toString()
+            val inputUserNameString = inputUserName.text.toString()
+            score.userName = inputUserNameString
             scoresListViewModel.saveUserScore(score)
         }
 
