@@ -15,7 +15,7 @@
     <string name="start_button">Start</string>
     <string name="help_button">Help</string>
     <string name="quit_button">Quit</string>
-    <string name="score_button">Scores</string>
+    <string name="score_button">Score</string>
 
     <!--    these are for the score activity-->
     <string name="score_text_view">Here\'s How You Did!</string>

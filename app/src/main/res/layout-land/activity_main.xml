@@ -44,37 +44,37 @@
         android:paddingBottom="20dp">
 
         <Button
+            style="@style/ButtonDefault"
             android:id="@+id/menu_start_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
             android:text="@string/start_button"
             android:textColor="@color/buttonTextColor"
             android:textSize="24sp" />
 
         <Button
+            style="@style/ButtonDefault"
             android:id="@+id/menu_score_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
             android:text="@string/score_button"
             android:textColor="@color/buttonTextColor"
             android:textSize="24sp" />
 
         <Button
+            style="@style/ButtonDefault"
             android:id="@+id/menu_help_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
             android:text="@string/help_button"
             android:textColor="@color/buttonTextColor"
             android:textSize="24sp" />
 
         <Button
+            style="@style/ButtonDefault"
             android:id="@+id/menu_quit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
             android:text="@string/quit_button"
             android:textColor="@color/buttonTextColor"
             android:textSize="24sp" />
