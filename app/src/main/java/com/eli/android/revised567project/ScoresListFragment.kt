@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 class ScoresListFragment : Fragment() {
     private lateinit var userScore: UserScore
     private lateinit var scoreRecyclerView: RecyclerView
-    private var adapter:ScoreAdapter? = null
+    private var adapter:ScoreAdapter? = ScoreAdapter(emptyList())
     private val scoresListViewModel: ScoresListViewModel by lazy {
         ViewModelProvider(this).get(ScoresListViewModel::class.java)
     }
@@ -32,15 +33,27 @@ class ScoresListFragment : Fragment() {
 
         scoreRecyclerView = view.findViewById(R.id.score_recycler_view)
         scoreRecyclerView.layoutManager = LinearLayoutManager(context)
-        updateUI()
+//        updateUI()
         return view
     } // end of onCreateView
 
-    private fun updateUI() {
-        val scores : MutableList<UserScore> = scoresListViewModel.scores
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        scoresListViewModel.scoresListLiveData.observe(
+            viewLifecycleOwner,
+            Observer { scores ->
+                scores?.let {
+                    updateUI(scores)
+                }
+            }
+        )
+    } // end of onViewCreated
+
+    private fun updateUI(scores: List<UserScore>) {
+//        val scores : MutableList<UserScore> = scoresListViewModel.scores
         adapter = ScoreAdapter(scores)
         scoreRecyclerView.adapter=adapter
-    }
+    } // end of updateUI()
 
     companion object {
         fun newInstance(): ScoresListFragment {
@@ -58,14 +71,15 @@ class ScoresListFragment : Fragment() {
             this.score = score
             timeTextView.text = this.score.time
             usernameTextView.text = this.score.userName
-        }
+        } // end of bind()
+
     } // end of ScoreHolder inner class
 
     private inner class ScoreAdapter(var scores:List<UserScore>) : RecyclerView.Adapter<ScoreHolder>() {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScoreHolder {
             val view: View = layoutInflater.inflate(R.layout.score_item_layout, parent, false)
             return ScoreHolder(view)
-        }
+        } // end of onCreateViewHolder
 
         override fun getItemCount(): Int {
             return scores.size
@@ -78,6 +92,7 @@ class ScoresListFragment : Fragment() {
 //                usernameTextView.text = score.userName
 //                timeTextView.text = score.time
 //            }
-        }
+        } // end of onBindViewHolder
+
     } // end of ScoreAdapter inner class
 }

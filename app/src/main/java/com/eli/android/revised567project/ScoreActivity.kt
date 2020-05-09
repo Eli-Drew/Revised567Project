@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import kotlin.math.round
 
 private const val CORRECT_MULTIPLIER = 100
@@ -26,6 +27,11 @@ class ScoreActivity : AppCompatActivity() {
     private lateinit var timeView: TextView
     private lateinit var pointsView: TextView
     private lateinit var userNameView: View
+    private lateinit var saveButton: Button
+
+    private val scoresListViewModel: ScoresListViewModel by lazy {
+        ViewModelProvider(this).get(ScoresListViewModel::class.java)
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +44,7 @@ class ScoreActivity : AppCompatActivity() {
         timeView = findViewById(R.id.timer_text_view)
         homeButton = findViewById(R.id.score_return_home)
         userNameView = findViewById(R.id.score_input_username)
+        saveButton = findViewById(R.id.score_save_button)
 
         val userScore = intent.getDoubleExtra(SCORE,0.0)
         val stringScore = round(userScore).toString()
@@ -56,23 +63,32 @@ class ScoreActivity : AppCompatActivity() {
 
         homeButton.setOnClickListener {
             val homeIntent = Intent(this, MainActivity::class.java)
-            val name = findViewById<EditText>(R.id.score_input_username)
-            val nameString = name.toString()
-            homeIntent.putExtra(POINTS_POSSIBLE, pointsPossible)
-            homeIntent.putExtra(POINTS_CORRECT, answersCorrect)
-            homeIntent.putExtra(TIME_TAKEN, timeElapsed)
-            homeIntent.putExtra(TOTAL_SCORE, totalPoints)
-            homeIntent.putExtra(USERNAME, nameString)
+//            val name = findViewById<EditText>(R.id.score_input_username)
+//            val nameString = name.toString()
+//            homeIntent.putExtra(POINTS_POSSIBLE, pointsPossible)
+//            homeIntent.putExtra(POINTS_CORRECT, answersCorrect)
+//            homeIntent.putExtra(TIME_TAKEN, timeElapsed)
+//            homeIntent.putExtra(TOTAL_SCORE, totalPoints)
+//            homeIntent.putExtra(USERNAME, nameString)
             startActivity(homeIntent)
+        } // end of homeButton listener
+
+        saveButton.setOnClickListener {
+            val score = UserScore()
+            score.time = timeElapsed
+            score.totalPoints = totalPoints
+            val inputUserName = findViewById<EditText>(R.id.score_input_username)
+            score.userName = inputUserName.toString()
+            scoresListViewModel.saveUserScore(score)
         }
 
+    } // end of onCreate()
 
-    }
-    fun getTotalPoints(time: Long,  correctAnswers: Int) : Long {
+    private fun getTotalPoints(time: Long,  correctAnswers: Int) : Long {
         val seconds = time
         val pointsDeducted = seconds * TIME_MULTIPLIER
         val multiplierPoints = CORRECT_MULTIPLIER * correctAnswers
         return multiplierPoints - pointsDeducted
 //        return multiplierPoints - time
-    }
+    } // end of getTotalPoints()
 }

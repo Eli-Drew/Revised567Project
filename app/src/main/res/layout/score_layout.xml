@@ -119,11 +119,24 @@
         android:inputType="text"
         android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/score_return_home"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/return_home" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/score_return_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/return_home" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/score_save_button"
+            android:text="@string/score_save_button_text"/>
+
+    </LinearLayout>
 
 
 
