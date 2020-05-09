@@ -29,17 +29,16 @@
         android:orientation="horizontal">
 
         <Button
-
+            style="@style/ButtonDefault.Easy"
             android:text="@string/easy"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:id="@+id/easy_button"
             android:textColor="@color/buttonTextColor"
-            android:backgroundTint="@color/colorPrimary"
             />
 
         <Button
-            android:backgroundTint="@color/colorPrimary"
+            style="@style/ButtonDefault.Med"
             android:text="@string/medium"
             android:textColor="@color/buttonTextColor"
             android:layout_width="150dp"
@@ -53,8 +52,8 @@
         android:orientation="horizontal">
 
         <Button
+            style="@style/ButtonDefault.Hard"
             android:text="@string/hard"
-            android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/buttonTextColor"
             android:layout_width="150dp"
             android:layout_height="60dp"
@@ -62,9 +61,9 @@
 
 
         <Button
+            style="@style/ButtonDefault.Prod"
             android:text="@string/prodigy"
             android:textColor="@color/buttonTextColor"
-            android:backgroundTint="@color/colorPrimary"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:id="@+id/prodigy_button"/>

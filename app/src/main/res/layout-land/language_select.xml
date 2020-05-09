@@ -42,21 +42,20 @@
         android:orientation="horizontal">
 
         <Button
-
+            style="@style/ButtonDefault"
             android:text="@string/csharp"
             android:textColor="@color/buttonTextColor"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:id="@+id/csharpe"
-            android:backgroundTint="@color/colorPrimary"/>
+            android:id="@+id/csharpe"/>
 
         <Button
+            style="@style/ButtonDefault"
             android:text="@string/javascript"
             android:textColor="@color/buttonTextColor"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:id="@+id/javascript"
-            android:backgroundTint="@color/colorPrimary"/>
+            android:id="@+id/javascript"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -65,21 +64,21 @@
         android:orientation="horizontal">
 
         <Button
+            style="@style/ButtonDefault"
             android:text="@string/cpp"
             android:textColor="@color/buttonTextColor"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:id="@+id/cpp"
-            android:backgroundTint="@color/colorPrimary"/>
+            android:id="@+id/cpp"/>
 
 
         <Button
+            style="@style/ButtonDefault"
             android:text="@string/python"
             android:textColor="@color/buttonTextColor"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:id="@+id/python"
-            android:backgroundTint="@color/colorPrimary"/>
+            android:id="@+id/python"/>
 
     </LinearLayout>
 
