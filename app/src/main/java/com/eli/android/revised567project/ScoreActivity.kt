@@ -21,7 +21,6 @@ const val USERNAME = "user's input name"
 
 class ScoreActivity : AppCompatActivity() {
 
-    private lateinit var homeButton: Button
     private lateinit var correctView: TextView
     private lateinit var possibleView: TextView
     private lateinit var timeView: TextView
@@ -42,7 +41,6 @@ class ScoreActivity : AppCompatActivity() {
         possibleView = findViewById(R.id.possible_text_view)
         pointsView = findViewById(R.id.score_points_text_view)
         timeView = findViewById(R.id.timer_text_view)
-        homeButton = findViewById(R.id.score_return_home)
         userNameView = findViewById(R.id.score_input_username)
         saveButton = findViewById(R.id.score_save_button)
 
@@ -61,19 +59,9 @@ class ScoreActivity : AppCompatActivity() {
         pointsView.text = totalPoints.toString()
         timeView.text = timeElapsed
 
-        homeButton.setOnClickListener {
-            val homeIntent = Intent(this, MainActivity::class.java)
-//            val name = findViewById<EditText>(R.id.score_input_username)
-//            val nameString = name.toString()
-//            homeIntent.putExtra(POINTS_POSSIBLE, pointsPossible)
-//            homeIntent.putExtra(POINTS_CORRECT, answersCorrect)
-//            homeIntent.putExtra(TIME_TAKEN, timeElapsed)
-//            homeIntent.putExtra(TOTAL_SCORE, totalPoints)
-//            homeIntent.putExtra(USERNAME, nameString)
-            startActivity(homeIntent)
-        } // end of homeButton listener
 
         saveButton.setOnClickListener {
+            val homeIntent = Intent(this, MainActivity::class.java)
             val score = UserScore()
             score.time = timeElapsed
             score.totalPoints = totalPoints
@@ -81,6 +69,7 @@ class ScoreActivity : AppCompatActivity() {
             val inputUserNameString = inputUserName.text.toString()
             score.userName = inputUserNameString
             scoresListViewModel.saveUserScore(score)
+            startActivity(homeIntent)
         }
 
     } // end of onCreate()
