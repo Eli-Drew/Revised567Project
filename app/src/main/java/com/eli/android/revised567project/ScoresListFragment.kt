@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import org.w3c.dom.Text
 
 class ScoresListFragment : Fragment() {
     private lateinit var userScore: UserScore
@@ -66,11 +67,13 @@ class ScoresListFragment : Fragment() {
 
         private val usernameTextView: TextView = itemView.findViewById(R.id.score_item_username)
         private val timeTextView: TextView = itemView.findViewById(R.id.score_item_time)
+        private val scoreTextView: TextView = itemView.findViewById(R.id.score_item_points)
 
         fun bind(score: UserScore) {
             this.score = score
             timeTextView.text = this.score.time
             usernameTextView.text = this.score.userName
+            scoreTextView.text = this.score.totalPoints.toString()
         } // end of bind()
 
     } // end of ScoreHolder inner class

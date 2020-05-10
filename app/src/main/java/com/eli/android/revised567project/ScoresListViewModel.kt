@@ -10,4 +10,8 @@ class ScoresListViewModel : ViewModel() {
     fun saveUserScore(score: UserScore) {
         userScoreRepository.addUserScore(score)
     }
+
+    fun removeUserScore(score: UserScore) {
+        userScoreRepository.removeScore(score.id)
+    }
 }
