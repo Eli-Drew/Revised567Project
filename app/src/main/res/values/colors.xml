@@ -6,9 +6,13 @@
     <color name="buttonTextColor">#FFFFFF</color>
     <color name="colorBackground">#F5FEE8</color>
     <color name="buttonPressed">#33FFCA</color>
+<!--    this is for the easy button -->
     <color name="soothing_blue">#1E99F4</color>
+<!--    this is for the medium button-->
     <color name="green">#2ED42E</color>
+<!--    this is for the hard button-->
     <color name="orange">#F1C40F</color>
+<!--    this is for the prodigy button-->
     <color name="red">#FF0801</color>
 
 
