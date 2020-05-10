@@ -8,12 +8,16 @@
     <color name="buttonPressed">#33FFCA</color>
 <!--    this is for the easy button -->
     <color name="soothing_blue">#1E99F4</color>
+    <color name="easyPressed">#9DC2F4</color>
 <!--    this is for the medium button-->
     <color name="green">#2ED42E</color>
+    <color name="medPressed">#85D47E</color>
 <!--    this is for the hard button-->
     <color name="orange">#F1C40F</color>
+    <color name="hardPressed">#F1D193</color>
 <!--    this is for the prodigy button-->
     <color name="red">#FF0801</color>
+    <color name="prodPressed">#FFA5A1</color>
 
 
 </resources>
