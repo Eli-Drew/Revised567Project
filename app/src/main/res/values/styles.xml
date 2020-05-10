@@ -14,7 +14,7 @@
     </style>
 
     <style name="ButtonDefault.Easy">
-        <item name="android:backgroundTint">@color/soothing_blue</item>
+        <item name="android:background">@drawable/easy_button_root</item>
     </style>
     <style name="ButtonDefault.Med">
         <item name="android:backgroundTint">@color/green</item>
