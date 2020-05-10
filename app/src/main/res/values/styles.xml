@@ -25,5 +25,17 @@
     <style name="ButtonDefault.Prod">
         <item name="android:background">@drawable/prodigy_button_root</item>
     </style>
+    <style name="ButtonDefault.cpp">
+        <item name="android:background">@drawable/cpp_button_root</item>
+    </style>
+    <style name="ButtonDefault.csharpe">
+        <item name="android:background">@drawable/csharpe_button_root</item>
+    </style>
+    <style name="ButtonDefault.python">
+        <item name="android:background">@drawable/python_button_root</item>
+    </style>
+    <style name="ButtonDefault.js">
+        <item name="android:background">@drawable/js_button_root</item>
+    </style>
 
 </resources>

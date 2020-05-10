@@ -14,8 +14,8 @@ interface UserScoreDao {
     @Query("SELECT * FROM userscore")
     fun getUserScores(): LiveData<List<UserScore>>
 
-    @Query("SELECT * FROM userscore WHERE id=(:id)")
-    fun removeUserScore(id: UUID) : LiveData<UserScore>
+//    @Query("DELETE FROM UserScore WHERE id=(:id)")
+//    fun removeUserScore(id: UUID) : LiveData<UserScore>
 
     @Update
     fun updateScore(score: UserScore)

@@ -25,7 +25,7 @@ class UserScoreRepository private constructor(context: Context){
 
     fun getUserScores() : LiveData<List<UserScore>> = userScoreDao.getUserScores()
     fun getUserScore(id: UUID) : LiveData<UserScore?> = userScoreDao.getUserScore(id)
-    fun removeScore(id: UUID) : LiveData<UserScore> = userScoreDao.removeUserScore(id)
+//    fun removeScore(id: UUID) : LiveData<UserScore> = userScoreDao.removeUserScore(id)
 
     fun addUserScore(score: UserScore) {
         executor.execute {

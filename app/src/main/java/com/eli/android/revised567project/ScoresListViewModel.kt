@@ -11,7 +11,7 @@ class ScoresListViewModel : ViewModel() {
         userScoreRepository.addUserScore(score)
     }
 
-    fun removeUserScore(score: UserScore) {
-        userScoreRepository.removeScore(score.id)
-    }
+//    fun removeUserScore(score: UserScore) {
+//        userScoreRepository.removeScore(score.id)
+//    }
 }
