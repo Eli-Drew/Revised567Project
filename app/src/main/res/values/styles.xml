@@ -17,13 +17,13 @@
         <item name="android:background">@drawable/easy_button_root</item>
     </style>
     <style name="ButtonDefault.Med">
-        <item name="android:backgroundTint">@color/green</item>
+        <item name="android:background">@drawable/medium_button_root</item>
     </style>
     <style name="ButtonDefault.Hard">
-        <item name="android:backgroundTint">@color/orange</item>
+        <item name="android:background">@drawable/hard_button_root</item>
     </style>
     <style name="ButtonDefault.Prod">
-        <item name="android:backgroundTint">@color/red</item>
+        <item name="android:background">@drawable/prodigy_button_root</item>
     </style>
 
 </resources>
