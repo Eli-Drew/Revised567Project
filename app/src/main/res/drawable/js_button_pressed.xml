@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval">
-    <solid android:color="@color/buttonPressed"/>
 
-</shape>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:state_pressed="false" android:drawable="@drawable/js" />
+    <item android:state_focused="true" android:state_pressed="true" android:drawable="@drawable/jslogoclicked" />
+    <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/pngtrans"/>
+    <item android:drawable="@drawable/js" />
+</selector>
+
+
+
+
+
+
+
+
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:shape="oval">-->
+<!--    <solid android:background="@drawable/jslogoclicked"/>-->
+
+<!--</shape>-->

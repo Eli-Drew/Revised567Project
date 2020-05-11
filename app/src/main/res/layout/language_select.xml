@@ -16,7 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textSize="23dp"
+            android:textSize="40dp"
+            android:textStyle="bold"
             android:paddingBottom="40dp"
             android:text="@string/homepage_title" />
     </LinearLayout>
@@ -29,6 +30,7 @@
             android:gravity="center"
             android:textSize="19dp"
             android:paddingBottom="20dp"
+            android:textStyle="bold"
             android:text="@string/langSelect" />
 
     </LinearLayout>
@@ -41,21 +43,18 @@
 
         <Button
             style="@style/ButtonDefault"
-            android:text="@string/csharp"
-            android:textColor="@color/buttonTextColor"
+            android:background="@drawable/csharpe_button_root"
             android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:id="@+id/csharpe"
-
-            />
+            android:layout_height="150dp"
+            android:id="@+id/csharpe"/>
 
         <Button
             style="@style/ButtonDefault"
-            android:text="@string/javascript"
-            android:textColor="@color/buttonTextColor"
+            android:background="@drawable/js_button_root"
             android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_height="150dp"
             android:id="@+id/javascript"/>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -65,19 +64,17 @@
 
         <Button
             style="@style/ButtonDefault"
-            android:text="@string/cpp"
-            android:textColor="@color/buttonTextColor"
+            android:background="@drawable/cpp_button_root"
             android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_height="150dp"
             android:id="@+id/cpp"/>
-
 
         <Button
             style="@style/ButtonDefault"
             android:text="@string/python"
-            android:textColor="@color/buttonTextColor"
+            android:background="@drawable/python_button_root"
             android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_height="150dp"
             android:id="@+id/python"/>
 
     </LinearLayout>

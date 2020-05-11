@@ -43,20 +43,20 @@
 
         <Button
             style="@style/ButtonDefault"
-            android:text="@string/csharp"
-            android:textColor="@color/buttonTextColor"
+            android:background="@drawable/clogo"
             android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_height="150dp"
             android:id="@+id/csharpe"/>
 
         <Button
             style="@style/ButtonDefault"
-            android:text="@string/javascript"
-            android:textColor="@color/buttonTextColor"
+            android:background="@drawable/pngtrans"
             android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_height="150dp"
             android:id="@+id/javascript"/>
+
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,19 +65,17 @@
 
         <Button
             style="@style/ButtonDefault"
-            android:text="@string/cpp"
-            android:textColor="@color/buttonTextColor"
+            android:background="@drawable/cpp_image"
             android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_height="150dp"
             android:id="@+id/cpp"/>
-
 
         <Button
             style="@style/ButtonDefault"
             android:text="@string/python"
-            android:textColor="@color/buttonTextColor"
+            android:background="@drawable/python"
             android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_height="150dp"
             android:id="@+id/python"/>
 
     </LinearLayout>
