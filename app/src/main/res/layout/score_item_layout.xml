@@ -18,7 +18,7 @@
         android:orientation="vertical"
         android:gravity="start">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/score_item_username"
             android:gravity="start"
@@ -26,7 +26,7 @@
             android:textSize="23dp"/>
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/score_item_time"
             android:gravity="start"
@@ -36,8 +36,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="226dp"
-        android:layout_height="98dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="end"
         android:orientation="horizontal">
 
