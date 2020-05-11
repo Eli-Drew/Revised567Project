@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="buttonTextColor">#FFFFFF</color>
-    <color name="colorBackground">#F5FEE8</color>
+    <color name="colorBackground">#FeF5Fd</color>
     <color name="buttonPressed">#33FFCA</color>
 <!--    this is for the easy button -->
     <color name="soothing_blue">#1E99F4</color>

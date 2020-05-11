@@ -71,7 +71,6 @@
 
         <Button
             style="@style/ButtonDefault"
-            android:text="@string/python"
             android:background="@drawable/python_button_root"
             android:layout_width="150dp"
             android:layout_height="150dp"
