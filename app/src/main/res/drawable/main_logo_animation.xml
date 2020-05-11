@@ -9,4 +9,35 @@
         android:drawable="@drawable/main_logo_fg2"
         android:duration="500"/>
 
+    <item
+        android:drawable="@drawable/main_logo_fg3"
+        android:duration="500"/>
+
+    <item
+        android:drawable="@drawable/main_logo_fg4"
+        android:duration="500"/>
+
+    <item
+        android:drawable="@drawable/main_logo_fg5"
+        android:duration="500"/>
+
+    <item
+        android:drawable="@drawable/main_logo_fg6"
+        android:duration="500"/>
+
+    <item
+        android:drawable="@drawable/main_logo_fg7"
+        android:duration="500"/>
+    <item
+        android:drawable="@drawable/main_logo_fg8"
+        android:duration="500"/>
+
+    <item
+        android:drawable="@drawable/main_logo_fg9"
+        android:duration="500"/>
+
+    <item
+        android:drawable="@drawable/main_logo_fg10"
+        android:duration="500"/>
+
 </animation-list>
