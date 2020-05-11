@@ -2,20 +2,13 @@ package com.eli.android.revised567project
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.os.SystemClock
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Chronometer
 import android.widget.TextView
-import android.widget.Toast
-import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.elirinker.quizgame.QuestionViewModel
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.difficulty_select.*
 
 private const val TAG = "QuestionActivity"
 const val SCORE = "QuestionActivity.score"

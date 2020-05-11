@@ -1,7 +1,7 @@
-package com.example.elirinker.quizgame
+package com.eli.android.revised567project
 
 import androidx.lifecycle.ViewModel
-import com.eli.android.revised567project.R
+import com.example.elirinker.quizgame.Question
 
 class QuestionViewModel: ViewModel() {
 
@@ -127,19 +127,28 @@ class QuestionViewModel: ViewModel() {
     )
 
     private val easyPythonQuestionBank = listOf(
-        Question(R.string.PythonEasyQues1, R.string.PythonEasyChoices1, "A", "Python", "Easy")
+        Question(R.string.PythonEasyQues1, R.string.PythonEasyChoices1, "A", "Python", "Easy"),
+        Question(R.string.pythonEasyQues2, R.string.pythonEasyChoices2, "C", "Python", "Easy"),
+        Question(R.string.pythonEasyQues3, R.string.pythonEasyChoices3, "C", "Python", "Easy"),
+        Question(R.string.pythonEasyQues4, R.string.pythonEasyChoices4, "B", "Python", "Easy")
     )
 
     private val mediumPythonQuestionBank = listOf(
-        Question(R.string.PythonMediumQues1, R.string.PythonMediumChoices, "D", "Python", "Medium")
+        Question(R.string.PythonMediumQues1, R.string.PythonMediumChoices, "D", "Python", "Medium"),
+        Question(R.string.pythonMediumQues2, R.string.pythonMediumChoices2, "C", "Python", "Medium"),
+        Question(R.string.pythonMediumQues3, R.string.pythonMediumChoices3, "A", "Python", "Medium"),
+        Question(R.string.pythonMediumQues4, R.string.pythonMediumChoices4, "B", "Python", "Medium")
     )
 
     private val hardPythonQuesitonBank = listOf(
-        Question(R.string.PythonHardQues1, R.string.PythonHardChoices1, "D", "Python", "Hard")
+        Question(R.string.PythonHardQues1, R.string.PythonHardChoices1, "D", "Python", "Hard"),
+        Question(R.string.pythonHardQues2, R.string.pythonHardChoices2, "A", "Python", "Hard"),
+        Question(R.string.pythonHardQues3, R.string.pythonHardChoices3, "C", "Python", "Hard")
     )
 
     private val prodigyPythonQuestionBank = listOf(
-        Question(R.string.PythonProdigyQues1, R.string.PythonProdigyChoices1, "C", "Python", "Hard")
+        Question(R.string.PythonProdigyQues1, R.string.PythonProdigyChoices1, "C", "Python", "Prodigy"),
+        Question(R.string.pythonProdigyQues2, R.string.pythonProdigyChoices2, "A", "Python", "Prodigy")
     )
 
     private val pythonQuestionBank = listOf(

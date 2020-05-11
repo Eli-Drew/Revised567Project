@@ -80,12 +80,33 @@
     <!--    Python.-->
     <string name="PythonEasyQues1">Python is a ....</string>
     <string name="PythonEasyChoices1">A: High-level language\nB: Low-level language\nC: Poisonous spider\nD: Mid-level language.</string>
+    <string name="pythonEasyQues2">Which of the following comments out a single line?</string>
+    <string name="pythonEasyChoices2">A: //\nB: """expression"""\nC: #\nD: /* */</string>
+    <string name="pythonEasyQues3">Which operator performs multiplication?</string>
+    <string name="pythonEasyChoices3">A: %\nB: x\nC: *\nD: **</string>
+    <string name="pythonEasyQues4">Which operator performs floor division?</string>
+    <string name="pythonEasyChoices4">A: /\nB: //\nC: ///\nD: %</string>
+
     <string name="PythonMediumQues1">Which of the following is a correct \'if\' statement?</string>
     <string name="PythonMediumChoices">A: if (x = y) {code;}\nB: if x = y: code\nC: if (x == y) {code;}\nD: if x == y: code</string>
+    <string name="pythonMediumQues2">How do you import a module in Python?</string>
+    <string name="pythonMediumChoices2">A: #include\nB: import\nC: import moduleName\nD: #import</string>
+    <string name="pythonMediumQues3">Which statement represents an augmented assignment?</string>
+    <string name="pythonMediumChoices3">A: a += 5\nB: a = a + 5\nC: a =+ 5\n:D: a = a += 5</string>
+    <string name="pythonMediumQues4">What is the output for\na = ["he","she","we"]\n.join(a)</string>
+    <string name="pythonMediumChoices4">A: ["heshewe"]\nB: "heshewe"\n:C ["he she we"]\nD: "he she we"</string>
+
     <string name="PythonHardQues1">Which of the following is a Python Keyword?</string>
     <string name="PythonHardChoices1">A: new\nB: malloc\nC: true\nD: True</string>
+    <string name="pythonHardQues2">What is the outcome of this statement?\n(4 * 8 + 6 / 2) % 10</string>
+    <string name="pythonHardChoices2">A: 5\nB: 35\nC: 30\nD: 0</string>
+    <string name="pythonHardQues3">What is the output for\nb = [11,13,15,17,19,21]\nprint(b[::2])</string>
+    <string name="pythonHardChoices3">A: [19,21]\nB: [11,15]\nC: [11,15,19]\nD: [13,17,21]</string>
+
     <string name="PythonProdigyQues1">Which of the following is a Python Keyword?</string>
     <string name="PythonProdigyChoices1">A: new\nB: switch\nC: yield\nD: switch</string>
+    <string name="pythonProdigyQues2">What class is every class automatically made a subclass of?</string>
+    <string name="pythonProdigyChoices2">A: class\nB: object\nC: thing\nD: super</string>
 
 
     <!--    C Sharp.-->

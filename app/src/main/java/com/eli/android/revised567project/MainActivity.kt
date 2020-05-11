@@ -30,9 +30,6 @@ class MainActivity : AppCompatActivity() {
         imageView.setBackgroundResource(R.drawable.main_logo_animation)
         animationLogo = imageView.background as AnimationDrawable
 
-//        animationLogo = AnimationUtils.loadAnimation(this, R.anim.main_logo_animation)
-//        imageView.startAnimation(animationLogo)
-
 
         menuStartButton.setOnClickListener{
             val intent = Intent(this, LanguageSelect::class.java)
