@@ -1,8 +1,12 @@
 package com.eli.android.revised567project
 
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -11,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var menuScoresButton: Button
     private lateinit var menuHelpButton: Button
     private lateinit var menuQuitButton: Button
+    private lateinit var animationLogo: AnimationDrawable
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +25,14 @@ class MainActivity : AppCompatActivity() {
         menuScoresButton = findViewById(R.id.menu_score_button)
         menuHelpButton = findViewById(R.id.menu_help_button)
         menuQuitButton = findViewById(R.id.menu_quit_button)
+
+        val imageView: ImageView = findViewById<ImageView>(R.id.imageView)
+        imageView.setBackgroundResource(R.drawable.main_logo_animation)
+        animationLogo = imageView.background as AnimationDrawable
+
+//        animationLogo = AnimationUtils.loadAnimation(this, R.anim.main_logo_animation)
+//        imageView.startAnimation(animationLogo)
+
 
         menuStartButton.setOnClickListener{
             val intent = Intent(this, LanguageSelect::class.java)
@@ -50,6 +63,11 @@ class MainActivity : AppCompatActivity() {
 
 
     } // end of override fun onCreate
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        animationLogo.start()
+    }
 
 } // end of class
 
